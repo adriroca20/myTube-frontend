@@ -1,13 +1,11 @@
-import { useEffect } from "react";
 import { Hero } from "../components/Hero";
-import { VideoCard } from "../components/VideoCard";
 import { useGetMediaQuery } from "../state/slices/mediaSlice";
 import { IMedia } from "../interfaces/media.interface";
 import { Slider } from "../components/Slider";
 import { RelatedVideos } from "../components/RelatedVideos";
 
 export const Landing = () => {
-  const { data, isLoading, isError } = useGetMediaQuery({});
+  const { data } = useGetMediaQuery({});
   const media: IMedia[] = data;
   return (
     <main className="text-zinc-900 dark:text-slate-200 pt-20" id="home">

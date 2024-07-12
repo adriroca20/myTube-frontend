@@ -4,7 +4,6 @@ import { Carousel } from "flowbite-react";
 import { PlayIcon } from "../icons/PlayIcon";
 export const Slider = ({
   sliderData,
-  className,
 }: {
   sliderData: IMedia[];
   className?: string;

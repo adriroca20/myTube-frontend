@@ -3,7 +3,6 @@ import { Pill } from '../components/Pill';
 import { MEDIA_FILE_MOCKUP } from '../constants';
 import { IMedia } from '../interfaces/media.interface';
 import { usePostMediaMutation } from '../state/slices/mediaSlice';
-import { Spinner } from '../components/Spinner';
 import { toast } from 'react-toastify';
 
 const UploadVideoScreen: React.FC = () => {

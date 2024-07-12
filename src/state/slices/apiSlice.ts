@@ -5,5 +5,5 @@ export const apiSlice = createApi({
     reducerPath: "api",
     baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
     tagTypes: ["Media"],
-    endpoints: (builder) => ({}),
+    endpoints: (_builder) => ({}),
 });

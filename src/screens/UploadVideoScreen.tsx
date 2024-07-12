@@ -11,7 +11,7 @@ const UploadVideoScreen: React.FC = () => {
     const [tag, setTag] = useState<string>("");
     const [tags, setTags] = useState<string[]>([]);
     const [videoFile, setVideoFile] = useState<File | undefined>();
-    const [postMedia, { isLoading }] = usePostMediaMutation();
+    const [postMedia] = usePostMediaMutation();
 
     const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value);
@@ -34,6 +34,7 @@ const UploadVideoScreen: React.FC = () => {
     const handleVideoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         setVideoFile(file);
+        console.log(videoFile?.name);
     };
     const joinTagsIntoString = (tags: string[]) => {
         return tags.join(', ');
